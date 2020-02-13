@@ -1,0 +1,65 @@
+if ZonaTx==1       
+    Psr=1;Phn=1;Ps=1;Ps_sr=1; Psr_rsux=1; Psr_rsuy=1; nirsux=0; nirsuy=0;
+        if  ZonaTx==1 & ZonaRx==1
+             ni=sum((Ax)) + sum((Ay));
+
+            for xi=1:1:ni
+             Psr=Psr*((1-Pa)^xi);
+            end
+            Phn=1;
+            Ps=Psr*Phn;         
+            Ps_rsux=0; Ps_rsuy=0;
+        end
+        
+        
+        if  ZonaTx==1 & ZonaRx==2
+             ni=sum((Ax)) + sum((Ay(1,1:4)));
+                
+            for xi=1:1:ni
+             Psr=Psr*((1-Pa)^xi);
+            end
+            Phn=1;    
+        Ps=Psr*Phn;
+        Ps_rsux=0; Ps_rsuy=0;
+            
+        end
+        
+        if  ZonaTx==1 & ZonaRx==3
+             ni=sum((Ax)) + sum((Ay(1,1:3)));
+
+            for xi=1:1:ni
+             Psr=Psr*((1-Pa)^xi);
+            end
+            Phn=1;
+        Ps=Psr*Phn;
+        Ps_rsux=0; Ps_rsuy=0;
+                
+        end
+        
+        if  ZonaTx==1 & ZonaRx==4
+               ni=sum((Ax)) + sum((Ay(1,1:2)));
+
+            for xi=1:1:ni
+             Psr=Psr*((1-Pa)^xi);
+            end
+            Phn=1;
+            Ps=Psr*Phn;
+            
+                Ps=Psr*Phn;
+                Ps_rsux=0; Ps_rsuy=0;
+            
+        end
+        
+        if  ZonaTx==1 & ZonaRx==5
+            ni=sum((Ax)) + sum((Ay(1,1:1)));
+
+            for xi=1:1:ni
+             Psr=Psr*((1-Pa)^xi);
+            end
+            Phn=1;
+            Ps=Psr*Phn;
+            Ps_rsux=0; Ps_rsuy=0;
+
+        end
+
+ end
